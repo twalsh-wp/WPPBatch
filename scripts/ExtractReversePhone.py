@@ -38,6 +38,7 @@ for row in csvReader:
 		headers.append('Name')
 		headers.append('Age Range')
 		headers.append('Gender')
+		headers.append('EntityType')
 		headers.append('Location Type')
 		headers.append('Street')
 		headers.append('City')
@@ -82,6 +83,7 @@ for row in csvReader:
 			name = wppbatchlib.nvl(owner.get('name',''),'')
 			ageRange = wppbatchlib.nvl(owner.get('age_range',''),'')
 			gender = owner.get('gender','')
+			entityType = owner.get('type','')
 			
 			for location in currAddresses:
 				
@@ -111,6 +113,7 @@ for row in csvReader:
 				resultRow.append(name)
 				resultRow.append(ageRange)
 				resultRow.append(gender)
+				resultRow.append(entityType)
 				resultRow.append(locationType)
 				resultRow.append(street)
 				resultRow.append(city)
@@ -176,6 +179,7 @@ for row in csvReader:
 				resultRow.append(name)
 				resultRow.append(ageRange)
 				resultRow.append(gender)
+				resultRow.append(entityType)
 				resultRow.append(locationType)
 				resultRow.append(street)
 				resultRow.append(city)
